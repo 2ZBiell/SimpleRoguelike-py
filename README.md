@@ -1,73 +1,103 @@
-# DESAFIO 🕹️ Improve This Game 🕹️
+# Simple Roguelike
 
-### Universidade Federal Rural de Pernambuco  
-**Departamento de Estatística e Informática**  
-**Bacharelado em Sistemas de Informação**  
-**Disciplina: Princípios de Programação**
+Um jogo de exploração de masmorras desenvolvido em Python com Pygame, como projeto de estudo de programação e desenvolvimento de jogos.
 
----
+## Sobre o projeto
 
-# **DESAFIO: Melhoria do Jogo de Personagens - POO em Python**
+O Simple Roguelike é um jogo 2D com visão de cima (*top-down*), no qual o jogador explora uma masmorra formada por salas e corredores, enfrenta inimigos e administra seus pontos de vida e itens.
 
-## **Descrição do Desafio**
+O projeto foi desenvolvido com fins educacionais, com foco no aprendizado de Python, programação orientada a objetos e desenvolvimento de jogos.
 
-Este repositório contém um código básico de um jogo de personagens que precisa ser aprimorado. O objetivo é aplicar conceitos de **Programação Orientada a Objetos (POO)**, **listas**, **dicionários** e **estruturas de repetição e decisão** para tornar o jogo mais interativo e dinâmico.
+## Inspiração
 
-## **Objetivo da Atividade**
+O projeto foi inspirado em **Shattered Pixel Dungeon**, um jogo roguelike de exploração de masmorras. A proposta é utilizar elementos característicos do gênero como referência para desenvolver uma implementação própria, com mecânicas e código desenvolvidos para fins de aprendizado.
 
-Você deve melhorar o código existente, que atualmente possui as classes `Personagem` e `Vilao`, mas falta a inclusão da classe `Heroi`. Além disso, os métodos implementados são muito básicos e não proporcionam uma interação interessante com o usuário.
+## Tecnologias utilizadas
 
-## **Tarefas a serem realizadas**
+- **Python:** linguagem de programação.
+- **Pygame:** biblioteca utilizada para renderização, entrada de teclado e execução do jogo.
+- **Git e GitHub:** controle de versão e hospedagem do código-fonte.
 
-1. **Criar a classe `Heroi`**, que deve herdar de `Personagem`, assim como `Vilao`. Essa classe deve ter características e métodos próprios.
-2. **Reestruturar os métodos das classes** para que realizem ações mais complexas e significativas, como ataques, defesa e uso de habilidades.
-3. **Criar um sistema de interação entre heróis e vilões**, adicionando diálogos e eventos durante o jogo.
-4. **Utilizar listas e dicionários** para armazenar informações dos personagens, como status, habilidades e itens.
-5. **Implementar estruturas de repetição e decisão** para gerenciar batalhas e eventos no jogo.
-6. **Melhorar a interface textual do jogo**, exibindo mensagens mais interativas para o jogador.
-7. **Garantir que o código esteja modularizado**, permitindo fácil manutenção e expansão do jogo.
+## Funcionalidades
 
-## **Requisitos Técnicos**
+- Exploração de mapas com salas e corredores.
+- Movimentação por teclado.
+- Câmera que acompanha o jogador.
+- Combate por turnos.
+- Inimigos com movimentação e ataques.
+- Sistema de pontos de vida.
+- Inventário com poções de cura.
 
-- Todos os personagens (heróis e vilões) devem ter atributos como `nome`, `vida`, `ataque` e `defesa`.
-- A classe `Heroi` deve herdar de `Personagem` e possuir métodos próprios, como `salvar_refem()` ou `usar_pocao()`.
-- Criar um método `dialogar()` para interações entre personagens, tornando o jogo mais envolvente.
-- Implementar batalhas entre heróis e vilões utilizando estruturas de repetição e decisão.
-- Usar **listas** para armazenar diferentes heróis e vilões, e **dicionários** para guardar seus atributos.
-- Melhorar a exibição de mensagens e interações para tornar a jogabilidade mais interessante.
-- Criar um sistema de registro de ações para acompanhar o histórico dos eventos do jogo.
-- **Use sua imaginação para elaborar diálogos, métodos que sirvam para interagir e use o código base já disponível como exemplo para expandi-lo. Não precisa manter os métodos que já existem, você pode alterá-los à vontade**.
+## Como executar
 
-## **Arquivos do Projeto**
+### Pré-requisitos
 
-O projeto contém os seguintes arquivos:
+- Python instalado.
+- Git instalado (opcional, caso queira clonar o repositório).
 
-- `personagem.py` - Define a classe base `Personagem`.
-- `vilao.py` - Define a classe `Vilao`, que herda de `Personagem`.
-- `heroi.py` - **(Novo arquivo a ser criado)** Define a classe `Heroi`, que também herda de `Personagem`.
-- `main.py` - Arquivo principal para rodar o jogo e testar as interações.
-- `utils.py` - **(Novo arquivo sugerido)** Pode conter funções auxiliares, como formatação de texto e controle do jogo.
+### Instalação
 
-## **Como Executar o Código**
+Clone o repositório:
 
-1. Clone este repositório:
-   ```sh
-   git clone https://github.com/profcvanut/improve-this-game.git
-   ```
-2. Acesse a pasta do projeto:
-   ```sh
-   cd improve-this-game
-   ```
-3. Execute o jogo:
-   ```sh
-   python main.py
-   ```
+```bash
+git clone URL_DO_REPOSITORIO
+```
 
-## **Contribuição**
+Entre na pasta do projeto:
 
-Caso tenha sugestões ou melhorias, fique à vontade para abrir uma **issue** ou fazer um **pull request**.
+```bash
+cd SimpleRoguelike-py
+```
 
----
+Instale as dependências:
 
-🚀 **Divirta-se programando e aprimorando este jogo!**
+```bash
+pip install -r requirements.txt
+```
 
+Execute o jogo:
+
+```bash
+python main.py
+```
+
+## Controles
+
+| Tecla | Ação |
+|---|---|
+| W / ↑ | Mover para cima |
+| S / ↓ | Mover para baixo |
+| A / ← | Mover para a esquerda |
+| D / → | Mover para a direita |
+| I | Abrir ou fechar o inventário |
+| 1 | Usar poção de vida |
+| ESC | Sair do jogo |
+
+## Estrutura do projeto
+
+```text
+SimpleRoguelike-py/
+├── main.py
+├── requirements.txt
+└── game/
+    ├── __init__.py
+    ├── personagem.py
+    ├── player.py
+    ├── inimigo.py
+    ├── mapa.py
+    └── inventario.py
+```
+
+## Objetivos de aprendizagem
+
+- Aplicar conceitos de programação orientada a objetos.
+- Trabalhar com classes, objetos, herança e métodos.
+- Desenvolver sistemas de movimentação e combate por turnos.
+- Gerenciar mapas, colisões e câmera em um jogo 2D.
+- Praticar organização de código e controle de versão.
+
+## Licença e créditos
+
+Este projeto é independente e foi desenvolvido para fins educacionais. Shattered Pixel Dungeon é uma obra de terceiros e serviu como inspiração. Este projeto não é oficial nem possui afiliação com seus desenvolvedores.
+
+A licença do projeto deverá ser definida pelo autor.
